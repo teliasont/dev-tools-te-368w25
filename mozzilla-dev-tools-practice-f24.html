@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun CSS Practice for Firefox Dev Tools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .task {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #007bff;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .hover-me:hover {
+            color: red;
+        }
+        .active-me:active {
+            font-weight: bold;
+        }
+        .focus-me:focus {
+            background-color: yellow;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav ul {
+            padding: 0;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #0056b3;
+        }
+        #grad1 {
+
+  background-image: linear-gradient(in hsl longer hue 0deg, red 0 0);
+}
+    </style>
+</head>
+<body id="grad1">
+    <div class="container">
+        <h1>Fun CSS Practice for Firefox Dev Tools</h1>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul>
+                <li><a href="https://firefox-source-docs.mozilla.org/devtools-user/index.html" target="_blank">Firefox Developer Tools Documentation</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_inspector_dom_explorer_and_css_editor" target="_blank">What Are Browser Developer Tools?</a></li>
+                <li><a href="https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html" target="_blank">How to Examine and Edit CSS with Firefox Dev Tools</a></li>
+            </ul>
+        </nav>
+
+        <!-- Instructions Section -->
+        <div class="section" id="instructions">
+            <h2>Instructions</h2>
+            <p>
+                1. Open this HTML file in <strong>Firefox</strong> and use the Inspector tool to examine the CSS properties.<br>
+                2. Open the file in <strong>VSCode</strong> to input your answers directly in the code.<br>
+                3. For each task, follow the instructions and input your answers inside the <code>&lt;code&gt;</code> tags provided. Style it like code to make it clear where the answers should go.<br>
+                4. After completing a task, save the changes in VSCode and refresh the page in Firefox to see the updates.
+            </p>
+        </div>
+
+        <div class="section" id="examine-rules">
+            <h2>1. Examining CSS Rules</h2>
+            <div class="task">
+                <h3>Task 1a: Basic Paragraph</h3>
+                <p>Use the Inspector to examine the CSS rules for this paragraph. Find the font-family and line-height.</p>
+                <p><strong>Your Answer:</strong> Font-family: <code>Arial, sans-serif</code>, Line-height: <code>1.6</code></p>
+            </div>
+            <div class="task">
+                <h3>Task 1b: Styled Button</h3>
+                <a href="#" class="button">Examine me!</a>
+                <p>Inspect this button and find its background-color and transition properties.</p>
+                <p><strong>Your Answer:</strong> Background-color: <code>#0056b3</code>, Transition: <code>background-color 0.3s</code></p>
+            </div>
+            <div class="task">
+                <h3>Task 1c: Section Container</h3>
+                <p>Examine the CSS rules for this entire section (hint: look for the .section class). What border properties does it have?</p>
+                <p><strong>Your Answer:</strong> Border: <code>1px solid #ddd</code></p>
+            </div>
+        </div>
+
+        <div class="section" id="edit-css">
+            <h2>2. Editing CSS</h2>
+            <div class="task">
+                <h3>Task 2a: Change Text Color</h3>
+                <p style="color: rgb(0, 198, 0);">Change my color to green using the Rules panel.</p>
+                <p><strong>Your Answer:</strong> New color: <code style="color: rgb(0, 198, 0);">rgb(0, 198, 0);</code></p>
+            </div>
+            <div class="task">
+                <h3>Task 2b: Modify Padding</h3>
+                <div style="background-color: #ddd; padding: 20px;">Increase my padding to 20px.</div>
+                
+            </div>
+            <div class="task">
+                <h3>Task 2c: Add a New Property</h3>
+                <p style="text-shadow: 2px 2px 4px #000000;">Add a text-shadow property to this text using the Rules panel. Try: 2px 2px 4px #000000</p>
+                <p><strong>Your Answer:</strong> Text-shadow: <code>style="text-shadow: 2px 2px 4px #000000;"</code></p>
+            </div>
+        </div>
+
+        <div class="section" id="pseudo-classes">
+            <h2>3. Working with Pseudo-classes</h2>
+            <div class="task">
+                <h3>Task 3a: Hover Effect</h3>
+                <p class="hover-me">Hover over me and check the :hover state in the Rules panel.</p>
+                <p><strong>Your Answer:</strong> :hover state: <code>color: red;</code></p>
+            </div>
+            <div class="task">
+                <h3>Task 3b: Active State</h3>
+                <button class="active-me">Click and hold me!</button>
+                <p>Hold the button and examine the :active state.</p>
+                <p><strong>Your Answer:</strong> :active state: <code>font-weight: bold;</code></p>
+            </div>
+            <div class="task">
+                <h3>Task 3c: Focus State</h3>
+                <input type="text" class="focus-me" placeholder="Focus me!">
+                <p>Focus on the input and check the :focus state.</p>
+                <p><strong>Your Answer:</strong> :focus state: <code>background-color: yellow;</code></p>
+            </div>
+        </div>
+
+        <div class="section" id="computed-styles">
+            <h2>4. Computed Styles</h2>
+            <div class="task">
+                <h3>Task 4a: Font Properties</h3>
+                <p style="font-family: Georgia, serif; font-size: 18px; font-weight: bold;">Examine my computed font properties.</p>
+                <p><strong>Your Answer:</strong> Font-family: <code>Georgia, serif</code>, Font-size: <code>18px</code>, Font-weight: <code>bold</code></p>
+            </div>
+            <div class="task">
+                <h3>Task 4b: Box Model</h3>
+                <div style="width: 200px; height: 100px; padding: 20px; border: 5px solid #000; margin: 15px; background-color: #f0f0f0;">
+                    Check my computed box model values.
+                </div>
+                <p><strong>Your Answer:</strong> Box Model: <code>box-sizing:
+                    content-box;
+                    display:
+                    block;
+                    float:
+                    none;
+                    line-height:
+                    25.6px;
+                    position:
+                    static;
+                    z-index:
+                    auto;</code></p>
+            </div>
+            <div class="task">
+                <h3>Task 4c: Inherited Properties</h3>
+                <div style="color: purple;">
+                    <p>What color am I? Check if I've inherited any styles.</p>
+                </div>
+                <p><strong>Your Answer:</strong> Inherited Color: <code style="color: purple;">purple</code></p>
+            </div>
+        </div>
+
+       
+    </div>
+    <footer style="font-size: 10px; text-align: center;"><br>
+        Do you like my super rad gradient?
+    </footer>
+</body>
+</html>
